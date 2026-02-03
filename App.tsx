@@ -325,9 +325,9 @@ const Pricing: React.FC = () => (
           ))}
         </div>
 
-        <button className="w-full bg-green-500 hover:bg-green-600 hover:scale-[1.03] transform transition-all text-white font-black py-8 px-10 rounded-[2.5rem] text-2xl md:text-4xl shadow-[0_12px_0_0_#15803d] active:shadow-none active:translate-y-[12px] flex items-center justify-center gap-4 mb-10 group">
+        <a href="https://pay.wiapy.com/NkRyjvREC" className="w-full bg-green-500 hover:bg-green-600 hover:scale-[1.03] transform transition-all text-white font-black py-8 px-10 rounded-[2.5rem] text-2xl md:text-4xl shadow-[0_12px_0_0_#15803d] active:shadow-none active:translate-y-[12px] flex items-center justify-center gap-4 mb-10 group">
           GARANTIR MINHA VAGA AGORA <ChevronRight className="w-10 h-10 group-hover:translate-x-2 transition-transform" />
-        </button>
+        </a>
         
         <div className="flex flex-col items-center gap-6">
            <img src="https://logodownload.org/wp-content/uploads/2015/03/pix-logo-1.png" className="h-8 opacity-70" alt="Pix" />
@@ -399,6 +399,14 @@ const VideoSection: React.FC = () => (
             <p className="text-white font-black mt-6 text-2xl uppercase tracking-widest drop-shadow-lg">Aperte o Play</p>
           </div>
           <a href="https://www.facebook.com/share/r/1GGQB1cjui/" target="_blank" rel="noopener noreferrer" className="absolute inset-0 z-20"></a>
+          <iframe
+            className="absolute inset-0 w-full h-full"
+            src="https://www.youtube.com/embed/SEU_ID_DO_VIDEO"
+            title="YouTube video player"
+            frameBorder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowFullScreen
+          ></iframe>
         </div>
       </div>
     </div>
