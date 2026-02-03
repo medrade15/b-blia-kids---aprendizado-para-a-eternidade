@@ -323,7 +323,7 @@ const Footer: React.FC = () => (
         <ul className="space-y-4 text-slate-400 text-lg">
           <li><a href="#oferta" className="hover:text-white transition-colors">Comprar agora</a></li>
           <li><a href="#faq" className="hover:text-white transition-colors">Dúvidas Frequentes</a></li>
-          <li><a href="https://wa.me/5511999999999" className="hover:text-green-400 transition-colors">Suporte WhatsApp</a></li>
+          <li><a href="https://wa.me/5561982041094" className="hover:text-green-400 transition-colors">Suporte WhatsApp</a></li>
         </ul>
       </div>
       
