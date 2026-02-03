@@ -554,7 +554,7 @@ const App: React.FC = () => {
           <p className="font-black text-slate-900 text-2xl leading-none">R$ 37,00</p>
         </div>
         <a 
-          href="#oferta" 
+          href="https://biblia-kids-aprendizado-para-a-eter.vercel.app/" 
           className="bg-green-500 text-white font-black py-4 px-8 rounded-2xl flex items-center justify-center gap-2 shadow-lg animate-pulse"
         >
           COMPRAR AGORA <ChevronRight className="w-5 h-5" />
