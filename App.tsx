@@ -17,9 +17,6 @@ import {
   Trophy,
   Zap,
   Users,
-  Gift,
-  FileText,
-  Palette,
   Timer
 } from 'lucide-react';
 
@@ -128,7 +125,6 @@ const Navbar: React.FC = () => (
       <div className="hidden md:flex gap-6 text-slate-600 font-bold text-sm">
         <a href="#diferenciais" className="hover:text-sky-500 transition-colors">Benefícios</a>
         <a href="#interatividade" className="hover:text-sky-500 transition-colors">Quiz</a>
-        <a href="#bonus" className="hover:text-sky-500 transition-colors">Bônus</a>
       </div>
       <a 
         href="#oferta" 
@@ -237,40 +233,6 @@ const QuizSection: React.FC = () => {
             </a>
           </div>
         )}
-      </div>
-    </section>
-  );
-};
-
-const BonusSection: React.FC = () => {
-  const bonuses = [
-    { title: "Livro de Colorir (Digital)", desc: "Mais de 50 desenhos bíblicos para imprimir e pintar fora das telas.", icon: <Palette className="w-8 h-8" />, value: "R$ 29,90" },
-    { title: "Guia de Devocional Familiar", desc: "Um passo a passo para fazer o culto doméstico com as crianças.", icon: <FileText className="w-8 h-8" />, value: "R$ 47,00" },
-    { title: "Músicas Bíblicas Kids", desc: "Playlist exclusiva com as canções das histórias para ouvir no carro.", icon: <Gift className="w-8 h-8" />, value: "R$ 19,90" }
-  ];
-
-  return (
-    <section id="bonus" className="py-24 px-4 bg-amber-50 relative overflow-hidden">
-      <div className="max-w-6xl mx-auto">
-        <div className="text-center mb-16">
-          <div className="bg-amber-200 text-amber-900 px-4 py-1 rounded-full text-xs font-black inline-block mb-4 uppercase tracking-widest">Presente Exclusivo</div>
-          <h2 className="font-kids font-bold text-4xl md:text-5xl text-slate-900 mb-6">Você ainda leva 3 Super Bônus!</h2>
-          <p className="text-slate-700 text-lg font-medium">Comprando hoje, você ganha mais de R$ 90,00 em bônus inteiramente grátis.</p>
-        </div>
-
-        <div className="grid md:grid-cols-3 gap-8">
-          {bonuses.map((b, i) => (
-            <div key={i} className="bg-white p-8 rounded-[2rem] shadow-xl border-2 border-amber-200 relative group overflow-hidden">
-              <div className="absolute top-0 right-0 bg-green-500 text-white font-black text-[10px] py-1 px-4 rounded-bl-xl">GRÁTIS</div>
-              <div className="w-16 h-16 bg-amber-100 text-amber-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                {b.icon}
-              </div>
-              <h3 className="font-kids font-bold text-xl text-slate-900 mb-3">{b.title}</h3>
-              <p className="text-slate-600 mb-4 text-sm font-medium leading-relaxed">{b.desc}</p>
-              <p className="text-slate-400 text-xs line-through font-bold">Valor normal: {b.value}</p>
-            </div>
-          ))}
-        </div>
       </div>
     </section>
   );
@@ -538,7 +500,6 @@ const App: React.FC = () => {
       <VideoSection />
       <Differentials />
       <QuizSection />
-      <BonusSection />
       <TestimonialsSection />
       <GuaranteeSection />
       <FaqSection />
@@ -554,7 +515,7 @@ const App: React.FC = () => {
           <p className="font-black text-slate-900 text-2xl leading-none">R$ 37,00</p>
         </div>
         <a 
-          href="https://pay.wiapy.com/NkRyjvREC" 
+          href="https://biblia-kids-aprendizado-para-a-eter.vercel.app/" 
           className="bg-green-500 text-white font-black py-4 px-8 rounded-2xl flex items-center justify-center gap-2 shadow-lg animate-pulse"
         >
           COMPRAR AGORA <ChevronRight className="w-5 h-5" />
