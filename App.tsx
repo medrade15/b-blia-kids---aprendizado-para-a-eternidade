@@ -34,7 +34,7 @@ const TESTIMONIALS = [
 const FAQS = [
   { q: "Como recebo o acesso?", a: "Imediatamente após a confirmação do pagamento, você receberá um e-mail com todas as instruções para acessar o aplicativo." },
   { q: "O pagamento é mensal?", a: "Não! O pagamento é ÚNICO. Você paga uma vez R$ 37 e tem acesso para sempre, sem cobranças futuras." },
-  { q: "Funciona em quais dispositivos?", a: "O Bíblia Kids funciona em qualquer celular ou tablet Android e iOS (iPhone/iPad)." },
+  { q: "Funciona em quais dispositivos?", a: "O Bíblia Kids funciona em qualquer celular ou tablet Android e tv android)." },
   { q: "E se eu não gostar?", a: "Você tem 7 dias de garantia incondicional. Se não gostar, devolvemos 100% do seu dinheiro sem perguntas." }
 ];
 
