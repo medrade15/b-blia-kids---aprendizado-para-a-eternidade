@@ -23,6 +23,9 @@ import {
   Timer
 } from 'lucide-react';
 
+// Importe sua imagem aqui (certifique-se que o nome do arquivo na pasta assets é igual)
+import heroImage from './src/assets/hero-tablet.png';
+
 // --- Constants & Types ---
 
 const TESTIMONIALS = [
@@ -171,7 +174,7 @@ const Hero: React.FC = () => (
         <div className="relative animate-float max-w-[320px] md:max-w-[400px]">
           <div className="absolute -inset-4 bg-sky-200 rounded-[4rem] blur-2xl opacity-30 -z-10 animate-pulse"></div>
           <img 
-            src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&w=800&q=80" 
+            src={heroImage} 
             alt="Tablet App Bíblia Kids" 
             className="w-full rounded-[3.5rem] shadow-2xl border-[12px] border-slate-900"
           />
@@ -378,40 +381,52 @@ const Footer: React.FC = () => (
   </footer>
 );
 
-const VideoSection: React.FC = () => (
-  <section className="py-20 px-4 bg-slate-50 border-y border-slate-100">
-    <div className="max-w-4xl mx-auto text-center mb-12">
-      <h2 className="font-kids font-bold text-3xl md:text-5xl text-slate-900 mb-6">Veja como o Bíblia Kids funciona!</h2>
-      <p className="text-slate-600 text-xl font-medium">Histórias interativas que prendem a atenção no que realmente importa.</p>
-    </div>
-    <div className="max-w-4xl mx-auto">
-      <div className="relative group cursor-pointer overflow-hidden rounded-[3rem] shadow-2xl border-[12px] border-white ring-1 ring-slate-200">
-        <div className="aspect-video bg-slate-900 flex items-center justify-center relative">
-          <img 
-            src="https://images.unsplash.com/photo-1512418490979-92798ccc13b0?auto=format&fit=crop&w=1200&q=80" 
-            className="absolute inset-0 w-full h-full object-cover opacity-60" 
-            alt="Video Bíblia Kids"
-          />
-          <div className="z-10 flex flex-col items-center">
-            <div className="w-24 h-24 bg-white/20 backdrop-blur-md rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-500 border border-white/30 shadow-2xl">
-              <Play className="text-white w-12 h-12 fill-current ml-2" />
-            </div>
-            <p className="text-white font-black mt-6 text-2xl uppercase tracking-widest drop-shadow-lg">Aperte o Play</p>
+const VideoSection: React.FC = () => {
+  const [isHovered, setIsHovered] = useState(false);
+
+  return (
+    <section className="py-20 px-4 bg-slate-50 border-y border-slate-100">
+      <div className="max-w-4xl mx-auto text-center mb-12">
+        <h2 className="font-kids font-bold text-3xl md:text-5xl text-slate-900 mb-6">Veja como o Bíblia Kids funciona!</h2>
+        <p className="text-slate-600 text-xl font-medium">Histórias interativas que prendem a atenção no que realmente importa.</p>
+      </div>
+      <div className="max-w-4xl mx-auto">
+        <div 
+          className="relative group cursor-pointer overflow-hidden rounded-[3rem] shadow-2xl border-[12px] border-white ring-1 ring-slate-200"
+          onMouseEnter={() => setIsHovered(true)}
+          onMouseLeave={() => setIsHovered(false)}
+        >
+          <div className="aspect-video bg-slate-900 flex items-center justify-center relative">
+            {isHovered ? (
+              <iframe
+                className="absolute inset-0 w-full h-full pointer-events-none"
+                src="https://www.youtube.com/embed/NjY8XeRns3c?autoplay=1&mute=0&controls=0&modestbranding=1&rel=0&showinfo=0&loop=1&playlist=NjY8XeRns3c&fs=0&disablekb=1&iv_load_policy=3"
+                title="YouTube video player"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowFullScreen
+              ></iframe>
+            ) : (
+              <>
+                <img 
+                  src="https://images.unsplash.com/photo-1512418490979-92798ccc13b0?auto=format&fit=crop&w=1200&q=80" 
+                  className="absolute inset-0 w-full h-full object-cover opacity-60" 
+                  alt="Video Bíblia Kids"
+                />
+                <div className="z-10 flex flex-col items-center">
+                  <div className="w-24 h-24 bg-white/20 backdrop-blur-md rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-500 border border-white/30 shadow-2xl">
+                    <Play className="text-white w-12 h-12 fill-current ml-2" />
+                  </div>
+                  <p className="text-white font-black mt-6 text-2xl uppercase tracking-widest drop-shadow-lg">Passe o mouse para assistir</p>
+                </div>
+              </>
+            )}
           </div>
-          <a href="https://www.facebook.com/share/r/1GGQB1cjui/" target="_blank" rel="noopener noreferrer" className="absolute inset-0 z-20"></a>
-          <iframe
-            className="absolute inset-0 w-full h-full"
-            src="https://www.youtube.com/embed/SEU_ID_DO_VIDEO"
-            title="YouTube video player"
-            frameBorder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowFullScreen
-          ></iframe>
         </div>
       </div>
-    </div>
-  </section>
-);
+    </section>
+  );
+};
 
 const Differentials: React.FC = () => (
   <section id="diferenciais" className="py-24 px-4 bg-white relative">
