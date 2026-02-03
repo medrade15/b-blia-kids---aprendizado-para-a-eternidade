@@ -400,7 +400,7 @@ const VideoSection: React.FC = () => {
             {isHovered ? (
               <iframe
                 className="absolute inset-0 w-full h-full pointer-events-none"
-                src="https://www.youtube.com/embed/NjY8XeRns3c?autoplay=1&mute=0&controls=0&modestbranding=1&rel=0&showinfo=0&loop=1&playlist=NjY8XeRns3c&fs=0&disablekb=1&iv_load_policy=3"
+                src="https://www.youtube.com/embed/NjY8XeRns3c?autoplay=1&mute=0&controls=0&modestbranding=1&rel=0&showinfo=0&loop=1&playlist=NjY8XeRns3c&fs=0&disablekb=1&iv_load_policy=3&playsinline=1"
                 title="YouTube video player"
                 frameBorder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
